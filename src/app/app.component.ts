@@ -40,4 +40,9 @@ export class AppComponent {
     this.actualizarOpcion();
   }
 
+  reproducirAudio(ruta: string) {
+    const audio = new Audio(ruta);
+    audio.play();
+  }
+
 }

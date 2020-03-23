@@ -3,7 +3,7 @@
     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       {{selectedLanguage}}
     </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <div class="dropdown-menu" type="button" aria-labelledby="dropdownMenuButton">
       <a *ngIf='opcionSeleccionada===1' (click)="onSelectOpcion(2)" class="dropdown-item">{{name2}}</a>
       <a *ngIf='opcionSeleccionada===2' (click)="onSelectOpcion(1)" class="dropdown-item">{{name1}}</a>
     </div>

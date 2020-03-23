@@ -17,16 +17,16 @@
 
 <div class="list-group">
   <a *ngFor="let palabra of palabras | buscarPalabras:buscar:opcionSeleccionada" (click)="onSelect(palabra)" class="list-group-item list-group-item-action flex-column align-items-start">
-    <a *ngIf="palabras != null; else palabrasVacio">
+    <a *ngIf="palabras != null">
       <div class="d-flex w-100 justify-content-between">
         <h5 class="mb-1">{{palabra.palabra1}} : {{palabra.palabra2}}</h5>
       </div>
     </a>
-    <ng-template #palabrasVacio>
-      <h5 class="mb-1">No hay palabras para mostrar</h5>
-    </ng-template>
-  </a>
-  
+    
+  </a>  
+</div>
+<div *ngIf="(palabras | buscarPalabras:buscar:opcionSeleccionada).length === 0">
+  <h5 class="mb-1">No hay palabras para mostrar</h5>
 </div>
 <div *ngIf="palabraSeleccionada">
   <h3>Palabra seleccionada: {{palabraSeleccionada.palabra1}}</h3>

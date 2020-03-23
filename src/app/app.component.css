@@ -1,5 +1,5 @@
 .bg-indigo{
-    background-color: #00005B;
+    background-color: #00005B;    
 }
 .btn-outline-primary {
     color: #FF1DB6;
@@ -16,4 +16,7 @@
 .borde-rosa {
     color: #00005B;
     border-color: #FF1DB6;
+}
+.img-principal {
+    background-image: url('../assets/imagenMisak.png');
 }

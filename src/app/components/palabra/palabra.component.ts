@@ -15,5 +15,9 @@ export class PalabraComponent {
 
   ngOnInit() {
   }
+  reproducirAudio(ruta: string) {
+    const audio = new Audio(ruta);
+    audio.play();
+  }
 
 }

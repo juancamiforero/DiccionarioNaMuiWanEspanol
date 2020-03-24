@@ -2,6 +2,6 @@
   <div class="card-body">
     <h5 *ngIf="entradas.opcion === 1" class="card-title">{{entradas.palabra.palabra2}}</h5>
     <h5 *ngIf="entradas.opcion === 2" class="card-title">{{entradas.palabra.palabra1}}</h5>
-    <button (click)="this.reproducirAudio(entradas.palabra.rutaAudio)">Reproducir</button>
+    <button class="btn btn-primary" (click)="this.reproducirAudio(entradas.palabra.rutaAudio)">Reproducir</button>
   </div>
 </div>

@@ -1,8 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import bootstrap from 'bootstrap';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from './app.routing';
 import { AppComponent } from './app.component';
 import { PalabraComponent } from './components/palabra/palabra.component';
 import { BuscarPalabrasPipe } from './pipes/buscar-palabras.pipe';

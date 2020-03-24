@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { PALABRAS } from './lista-palabras';
 import { Palabra } from './palabra';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -13,9 +14,11 @@ export class AppComponent {
   public palabraSeleccionada: Palabra = null;
   public selectedLanguage: string = ""
   public opcionSeleccionada: number = 2;
-  public name1 = "Na Mui Wan - Español";
-  public name2 = "Español - Na Mui Wan";
+  public name1 = "Español - Na Mui Wan";
+  public name2 = "Na Mui Wan - Español";
   public buscar='';
+
+  constructor(private router: Router) { }
 
   ngOnInit() {
     this.actualizarOpcion();

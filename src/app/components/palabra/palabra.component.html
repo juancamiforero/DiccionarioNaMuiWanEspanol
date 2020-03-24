@@ -3,5 +3,6 @@
     <h5 *ngIf="entradas.opcion === 1" class="card-title">{{entradas.palabra.palabra2}}</h5>
     <h5 *ngIf="entradas.opcion === 2" class="card-title">{{entradas.palabra.palabra1}}</h5>
     <button class="btn btn-primary" (click)="this.reproducirAudio(entradas.palabra.rutaAudio)"><i class="fas fa-volume-up"></i> Reproducir</button>
+    <img src={{entradas.palabra.rutaImg}} alt="" class="card-img my-2">
   </div>
 </div>

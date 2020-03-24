@@ -17,9 +17,10 @@
     </form>
   </nav>
 
-  <h2 *ngIf='opcionSeleccionada===1' class="text-center">{{name1}}</h2>
-  <h2 *ngIf='opcionSeleccionada===2' class="text-center">{{name2}}</h2>
-  <div class="row justify-content-center mt-5 container-fluid">
+  <h1 *ngIf='opcionSeleccionada===1' class="text-center"><a class="badge badge-light" type="button">{{name1}}</a></h1>
+  <h1 *ngIf='opcionSeleccionada===2' class="text-center"><a class="badge badge-light" type="button">{{name2}}</a></h1>
+
+  <div class="row justify-content-center mt-3 container-fluid">
     <div class="col-4">
       <form >
         <div class="list-group">

@@ -1,0 +1,22 @@
+.bg-indigo{
+    background-color: #00005B;    
+}
+.btn-outline-primary {
+    color: #FF1DB6;
+    border-color: #FF1DB6;
+}
+.bg-indigo-secondary {
+    color: #FF1DB6;
+    border-color: #FF1DB6;
+}
+.borde-azul {
+    color: #FF1DB6;
+    border-color: #00005B;
+}
+.borde-rosa {
+    color: #00005B;
+    border-color: #FF1DB6;
+}
+.img-principal {
+    background-image: url('../assets/imagenMisak.png');
+}

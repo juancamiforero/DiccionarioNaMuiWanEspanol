@@ -1,33 +1,49 @@
-<nav class="navbar navbar-dark bg-dark justify-content-between">
+<div class="img-principal">
+<nav class="navbar navbar-dark bg-indigo justify-content-between">
   <div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+      aria-haspopup="true" aria-expanded="false">
       {{selectedLanguage}}
     </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <div class="dropdown-menu bg-indigo-secondary" type="button" aria-labelledby="dropdownMenuButton">
       <a *ngIf='opcionSeleccionada===1' (click)="onSelectOpcion(2)" class="dropdown-item">{{name2}}</a>
       <a *ngIf='opcionSeleccionada===2' (click)="onSelectOpcion(1)" class="dropdown-item">{{name1}}</a>
     </div>
   </div>
   <form class="form-inline">
-    <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search" name="buscar" [(ngModel)]="buscar">
+    <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search" name="buscar"
+      [(ngModel)]="buscar">
     <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Buscar</button>
   </form>
 </nav>
-<h2>Palabras</h2>
 
-<div class="list-group">
-  <a *ngFor="let palabra of palabras | buscarPalabras:buscar:opcionSeleccionada" (click)="onSelect(palabra)" class="list-group-item list-group-item-action flex-column align-items-start">
-    <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">{{palabra.palabra1}} : {{palabra.palabra2}}</h5>
+
+<div class="row justify-content-center mt-5 container-fluid ">
+  <div class="col-8 ">
+    <form >
+    <h2 *ngIf='opcionSeleccionada===1' class="text-center">{{name2}}</h2>
+    <h2 *ngIf='opcionSeleccionada===2' class="text-center">{{name1}}</h2>
+    <i class="fas fa-ad">dsa</i>
+    <div class="list-group">
+      <a *ngFor="let palabra of palabras | buscarPalabras:buscar:opcionSeleccionada" (click)="onSelect(palabra)"
+        class="list-group-item list-group-item-action flex-column borde-rosa">
+        <a *ngIf="palabras != null">
+          <div class=" w-100 ">
+            <h5 class="mb-1">{{palabra.palabra1}} : {{palabra.palabra2}}</h5>
+            
+          </div>
+        </a>
+
+      </a>
     </div>
-  </a>
-  <div *ngIf="palabras.length === 0">
-    <h5 class="mb-1">No hay palabras para mostrar</h5>
-  </div>
-  
+    <div *ngIf="(palabras | buscarPalabras:buscar:opcionSeleccionada).length === 0">
+      <h5 class="mb-1">No hay palabras para mostrar</h5>
+    </div>
+    <div *ngIf="palabraSeleccionada">
+      <h3>Palabra seleccionada: {{palabraSeleccionada.palabra1}}</h3>
+    </div>  
+  </form>
 </div>
-<div *ngIf="palabraSeleccionada">
-  <h3>Palabra seleccionada: {{palabraSeleccionada.palabra1}}</h3>
 </div>
-
-<router-outlet></router-outlet>
+</div>
+<!--router-outlet></router-outlet-->

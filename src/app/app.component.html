@@ -17,8 +17,8 @@
     </form>
   </nav>
 
-  <h1 *ngIf='opcionSeleccionada===1' class="text-center"><a class="badge badge-light" type="button">{{name1}}</a></h1>
-  <h1 *ngIf='opcionSeleccionada===2' class="text-center"><a class="badge badge-light" type="button">{{name2}}</a></h1>
+  <h1 *ngIf='opcionSeleccionada===1' class="text-center"><a class="badge badge-light" type="button" (click)="onSelectOpcion(2)">{{name1}}</a></h1>
+  <h1 *ngIf='opcionSeleccionada===2' class="text-center"><a class="badge badge-light" type="button" (click)="onSelectOpcion(1)" >{{name2}}</a></h1>
 
   <div class="row justify-content-center mt-3 container-fluid">
     <div class="col-4">

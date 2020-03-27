@@ -1,11 +1,15 @@
 <div class="card">
   <div class="card-body">
-    <h5 *ngIf="entradas.opcion === 1" class="card-title">{{entradas.palabra.palabra2}}</h5>
-    <h5 *ngIf="entradas.opcion === 2" class="card-title">{{entradas.palabra.palabra1}}</h5>
-    <h5 class="card-title">       
-      <small class="text-muted"><em> Aqui va la descripción </em></small>
+    <div class="row">
+      <h5 *ngIf="entradas.opcion === 1" class="margen card-title">{{entradas.palabra.palabra2}}</h5>
+      <h5 *ngIf="entradas.opcion === 2" class="margen card-title">{{entradas.palabra.palabra1}}</h5>
+      <button class=" btn btn-primary-outline" (click)="this.reproducirAudio(entradas.palabra.rutaAudio)"><i class="fas fa-volume-up"></i></button>
+    </div>
+    <h5>       
+      <small class="text-muted"><em>Definición en español: {{ entradas.palabra.descripcionEspanol }}</em></small>
     </h5>
-    <button class="btn btn-primary" (click)="this.reproducirAudio(entradas.palabra.rutaAudio)"><i class="fas fa-volume-up"></i> Reproducir</button>
-    <img src={{entradas.palabra.rutaImg}} alt="" class="card-img my-2">
+    <div style="max-width:100%; height:auto">
+      <img src={{entradas.palabra.rutaImg}} alt="" class="card-img my-2">
+    </div>
   </div>
 </div>

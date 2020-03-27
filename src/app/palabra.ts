@@ -4,4 +4,5 @@ export interface Palabra {
     palabra2: string; // Palabra en Na Mui Wan
     rutaAudio: string;
     rutaImg: string;
+    descripcionEspanol: string;
 }

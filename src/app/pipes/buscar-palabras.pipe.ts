@@ -10,7 +10,7 @@ export class BuscarPalabrasPipe implements PipeTransform {
     const resultadoPalabras = [];
     for (const palabra of value) {
       let comparador = '';
-      idioma === 1 ? comparador = palabra.palabra2.toLowerCase() : comparador = palabra.palabra1.toLowerCase(); 
+      idioma === 2 ? comparador = palabra.palabra2.toLowerCase() : comparador = palabra.palabra1.toLowerCase(); 
       if (comparador.indexOf(word.toLowerCase()) != -1) {
         resultadoPalabras.push(palabra);
       }

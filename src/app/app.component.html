@@ -12,7 +12,7 @@
     </div>
     <form class="form-inline">
       <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search" name="buscar" maxlength="20"
-        [(ngModel)]="buscar" (change)="verificarLongitud()">
+        [(ngModel)]="buscar">
       <button class="btn btn-outline-primary">Buscar</button>      
     </form>
 
@@ -44,7 +44,7 @@
         </div>
       </form>
     </div>
-    <div class="col-md-4 vh-100">        
+    <div class="col-md-4 vh-100 sticky-top">        
       <div *ngIf="palabraSeleccionada && (palabras | buscarPalabras:buscar:opcionSeleccionada).length > 0">
         <app-palabra [entradas]="{palabra: palabraSeleccionada, opcion: opcionSeleccionada}"></app-palabra>
       </div>

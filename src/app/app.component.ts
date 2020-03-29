@@ -48,8 +48,4 @@ export class AppComponent {
     audio.play();
   }
 
-  verificarLongitud(){
-    
-  }
-
 }

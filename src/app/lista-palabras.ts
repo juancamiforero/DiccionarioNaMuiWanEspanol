@@ -34,7 +34,7 @@ export const PALABRAS: Palabra[] = [
         palabra1: 'Vaca',
         palabra2: 'Waara',
         rutaAudio: '../assets/audios//Animales/Vaca.mp3',
-        rutaAudioEspanol: '../assets/audios-espanol/Animales/caballo.mp3',
+        rutaAudioEspanol: '../assets/audios-espanol/Animales/vaca.mp3',
         rutaImg: '../assets/imagenes/vaca.png',
         descripcionEspanol: 'Mamífero rumiante bóvido, hembra, de unos 150 cm de altura y 250 cm de longitud, cuerpo muy robusto, pelo corto, cabeza gruesa provista de dos cuernos curvos y puntiagudos.'
     },

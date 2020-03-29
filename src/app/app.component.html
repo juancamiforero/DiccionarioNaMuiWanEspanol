@@ -11,7 +11,7 @@
       </div>
     </div>
     <form class="form-inline">
-      <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search" name="buscar" maxlength="20"
+      <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search" name="buscar" value="" maxlength="20" (keypress)="keyPress($event)"
         [(ngModel)]="buscar">
       <button class="btn btn-outline-primary">Buscar</button>      
     </form>

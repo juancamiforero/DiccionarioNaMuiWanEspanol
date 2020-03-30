@@ -49,7 +49,7 @@ export class AppComponent {
   }
 
   keyPress(event: any) {
-    const pattern = /[A-Za-zñ0-9]/;
+    const pattern = /[A-Za-zñ0-9 ]/;
     const inputChar = String.fromCharCode(event.charCode);
 
     if (!pattern.test(inputChar)) {    
